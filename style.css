@@ -8,7 +8,7 @@ header{
     align-items: center;
     padding: 0 10px;
     background-color: #fa4242;
-    position: fixed;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     z-index: 2;
@@ -28,9 +28,19 @@ header{
     background-color: black;
     border-radius: 10px;
     margin: 3px 0;
+    transition: 0.5s;
 }
 .traco-1, .traco-3{
     transform-origin: center right;
+}
+.menu-hamburguer.ativo .traco-1{
+    transform: rotateZ(-45deg);
+}
+.menu-hamburguer.ativo .traco-2{
+    opacity: 0;
+}
+.menu-hamburguer.ativo .traco-3{
+    transform: rotateZ(45deg);
 }
 .filtros{
     display: none;
@@ -54,6 +64,16 @@ header{
     transform: translateX(150%);
     transition: 0.5s;
 }
+.filtros.filtros.mobile.ativo{
+    transform: translateX(0);
+}
+.banner{
+    height: 50vw;
+    background-image: url(assets/images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 @media(min-width:576px){
     header{
         justify-content: space-between;
@@ -62,6 +82,9 @@ header{
         display: flex;
     }
     .menu-hamburguer{
+        display: none;
+    }
+    .filtros.mobile{
         display: none;
     }
 }
