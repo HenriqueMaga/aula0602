@@ -110,6 +110,15 @@ main{
 .chefao{
     background-image: url(assets/images/chefao.jpg);
 }
+.sherlock{
+    background-image: url(assets/images/sherlock.jpg);
+}
+.branquelas{
+    background-image: url(assets/images/branquelas.jpg);
+}
+.luta{
+    background-image: url(assets/images/luta.jpg);
+}
 
 @media(min-width:576px){
     header{
